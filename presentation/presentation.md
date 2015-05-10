@@ -45,27 +45,25 @@ custom_css: presentation
 
 <p>&nbsp;</p>
 
-* Why write tests anyway?
-* What is "**Unit** Testing"
-* Unit Testing the poor man's way
+* Testing in general (?)
+* I DO NOT TEST
+* Testing the poor man's way
 * Unit Testing with Minitest
   * Hello Minitest
-  * Digging Deeper with Minitest
+* Digging Deeper with Minitest
     * Hooks (setup/teardown)
-    * Test doubles (mocks & stubs)
+    * Isolating dependencies with Test doubles (mocks & stubs)
     * ...
-* Automated Build
-* Continuous Integration
-* Test Coverage
+* Test automation
 * Resources
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 !SLIDE down-open
 !SLIDE
-## 1
+## 1. Testing in General
 
+TODO...
 
 
 !SLIDE down-close
@@ -73,7 +71,46 @@ custom_css: presentation
 
 !SLIDE down-open
 !SLIDE
-## 2
+## I DO NOT TEST
+
+TODO...
+
+
+!SLIDE down-close
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+!SLIDE down-open
+!SLIDE
+## Testing the poor man's way
+
+!SLIDE down-close
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+!SLIDE down-open
+!SLIDE
+## Testing with Minitest
+
+
+!SLIDE down-close
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+!SLIDE down-open
+!SLIDE
+## Digging Deeper with Minitest
+
+!SLIDE down-close
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+!SLIDE down-open
+!SLIDE
+## Test Automation
+
+!SLIDE down-close
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+!SLIDE down-open
+!SLIDE
+## Resources
 
 !SLIDE down-close
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
