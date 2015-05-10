@@ -1,0 +1,8 @@
+*.swp
+.DS_Store
+.ruby-version
+.rbenv-gemsets
+.gems
+
+slides
+tmp
