@@ -72,8 +72,99 @@ TODO...
 !SLIDE down-open
 !SLIDE
 ## I DO NOT TEST
+<p>&nbsp;</p>
+<h3 class="fragment">Because I am the best :-)</h3>
+<p>&nbsp;</p>
+<p class="fragment">and my code does not have bugs! </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="fragment">LOL</p>
 
-TODO...
+!SLIDE
+## You think you do not test...
+
+<p class="fragment">Let's see a simple example</p>
+
+!SLIDE
+### You have the following assignement
+
+!SLIDE
+* Create a class that will hold statistics
+* Each instance of the class should hold the **value** and the **name** of a **single** statistic
+* The instance should know how to return its name and value
+* The instance should know how to **print** as a string
+
+!SLIDE
+### And then you write awesome code...
+
+<pre class="fragment"><code class="ruby">
+<%= include 'code/01-poormans-testing/stat.rb' %>
+</code></pre>
+
+!SLIDE
+### And you are done!
+<p>&nbsp;</p>
+<p class="fragment">Right?</p>
+<p>&nbsp;</p>
+<p class="fragment">I do not think so...</p>
+<p>&nbsp;</p>
+<p class="fragment">How do you know it's working?</p>
+<p>&nbsp;</p>
+<p class="fragment">I mean...</p>
+<p>&nbsp;</p>
+<p class="fragment"> How do you <strong>REALLY</strong> know it is working?</p>
+
+!SLIDE
+### You could run the program
+<p>&nbsp;</p>
+<ul>
+  <li class="fragment">Open the command line and run the application (if it's a CLI)</li>
+  <li class="fragment">Run the web server and open the application in the browser (if it's a Web Application)</li>
+  <li class="fragment">Run the web server and open Postman or <em>curl</em> or any HTTP client to send requests (if it's a Web API)</li>
+  <li class="fragment">You get the point...</li>
+</ul>
+
+!SLIDE
+### In our case
+<p>&nbsp;</p>
+<p class="fragment">Open <em>IRB</em> and play with the class</p>
+<pre class="fragment"><code class="bash">
+## in the shell
+cd path/to/dir
+irb
+</code></pre>
+
+<pre class="fragment"><code class="ruby">
+<%= include 'code/01-poormans-testing/irb_stat.rb' %>
+</code></pre>
+
+!SLIDE
+### Wait a minute...
+<p>&nbsp;</p>
+<p class="fragment">What did we just do?</p>
+<p>&nbsp;</p>
+<p class="fragment">We <strong>TESTED</strong> our code</p>
+<p>&nbsp;</p>
+<p class="fragment">by hand :-)</p>
+
+!SLIDE
+So...
+<p>&nbsp;</p>
+<p class="fragment">there is no:</p>
+<p>&nbsp;</p>
+<p class="fragment">"I DO NOT TEST"</p>
+<p>&nbsp;</p>
+<p class="fragment">There is: </p>
+<p class="fragment">"I do not test <span class="fragment"><strong>AUTOMATICALLY</strong> and <strong>REPEATEDLY</strong>"</span></p>
+
+!SLIDE
+### OK let's be cool...
+<p>&nbsp;</p>
+<p class="fragment">and test this thing</p>
+<p>&nbsp;</p>
+<p class="fragment">BUT...</p>
+<p>&nbsp;</p>
+<p class="fragment">How?</p>
 
 
 !SLIDE down-close
@@ -82,6 +173,40 @@ TODO...
 !SLIDE down-open
 !SLIDE
 ## Testing the poor man's way
+
+!SLIDE
+### One way to do it
+<p>&nbsp;</p>
+<p class="fragment">Manually</p>
+
+!SLIDE
+### Remember the <em>irb</em> session?
+<p>&nbsp;</p>
+
+<pre class="fragment"><code class="ruby">
+<%= include 'code/01-poormans-testing/irb_stat.rb' %>
+</code></pre>
+
+<p>&nbsp;</p>
+<p class="fragment">Let's use that as a skeleton</p>
+
+!SLIDE
+### What do we need?
+<p>&nbsp;</p>
+<ul>
+  <li class="fragment">A way to make "assertions"</li>
+  <li class="fragment">A way to run the "tests"</li>
+  <li class="fragment">A way to seperate the "tests" from the class it self</li>
+</ul>
+
+!SLIDE
+### Round 1: Same file
+<p>&nbsp;</p>
+<pre class="fragment"><code class="ruby">
+<%= include 'code/01-poormans-testing/01-same-file/stat.rb' %>
+</code></pre>
+
+
 
 !SLIDE down-close
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
