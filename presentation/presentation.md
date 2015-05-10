@@ -45,28 +45,11 @@ custom_css: presentation
 
 <p>&nbsp;</p>
 
-* Testing in general (?)
 * I DO NOT TEST
 * Testing the poor man's way
-* Unit Testing with Minitest
-  * Hello Minitest
-* Digging Deeper with Minitest
-    * Hooks (setup/teardown)
-    * Isolating dependencies with Test doubles (mocks & stubs)
-    * ...
-* Test automation
+* Testing with Minitest
 * Resources
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-!SLIDE down-open
-!SLIDE
-## 1. Testing in General
-
-TODO...
-
-
-!SLIDE down-close
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 !SLIDE down-open
@@ -268,19 +251,141 @@ Note: You can still use the file as a "library" with "require" and "require_rela
 ## Testing with Minitest
 
 
-!SLIDE down-close
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-!SLIDE down-open
 !SLIDE
-## Digging Deeper with Minitest
+## What is Minitest?
+<p>&nbsp;</p>
+<quote class="fragment">"Minitest provides a complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking."</quote>
+<p>&nbsp;</p>
+<p class="fragment">It comes pre-bundled with Ruby itself! (>= 1.9)</p>
+<p class="fragment">For Ruby < 1.9 just <code>gem install minitest</code></p>
 
-!SLIDE down-close
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-!SLIDE down-open
 !SLIDE
-## Test Automation
+## Using Minitest with our example
+<p>&nbsp;</p>
+<div class="fragment">
+  <p>stat.rb</p>
+  <pre><code class="ruby">
+  <%= include 'code/02-minitest/01-simple/stat.rb' %>
+  </code></pre>
+</div>
+
+!SLIDE
+<p>test_stat.rb</p>
+<pre><code class="ruby">
+<%= include 'code/02-minitest/01-simple/test_stat.rb' %>
+</code></pre>
+<ul>
+  <li class="fragment"><code>require "minitest/autorun"</code> enables automatic run of the tests from command line with <code>ruby test_stat</code></li>
+  <li class="fragment">You must create a subclass of <code>Minitest::Test</code></li>
+  <li class="fragment">All your tests must be inside instance methods that start with <code>test_</code></li>
+  <li class="fragment">Minitest offers <a href="http://docs.seattlerb.org/minitest/Minitest/Assertions.html" target="_blank">a lot of assertions</a></li>
+</ul>
+
+
+!SLIDE
+## (Some) Best Practices
+
+!SLIDE
+### BP1. Use as few assertions as possible per test method
+<p>&nbsp;</p>
+<div class="fragment">
+  <pre><code class="ruby">
+  <%= include 'code/02-minitest/01-simple/test_stat_single_assertions.rb' %>
+  </code></pre>
+</div>
+
+
+!SLIDE
+### BP2. Avoid repetition using `setup` and `teardown`
+<p>&nbsp;</p>
+<div class="fragment">
+  <pre><code class="ruby">
+  <%= include 'code/02-minitest/01-simple/test_stat_avoid_repetition.rb' %>
+  </code></pre>
+</div>
+
+
+!SLIDE
+### BP3. When **unit** testing use **test doubles** to isolate external dependencies
+<p>&nbsp;</p>
+<h4 class="fragment">Some examples:</h4>
+<ul>
+  <li class="fragment">3rd party systems (i.e. external APIs)</li>
+  <li class="fragment">Database/storage access</li>
+  <li class="fragment">Sending email</li>
+  <li class="fragment">Setting Time!</li>
+</ul>
+<p>&nbsp;</p>
+<p class="fragment">This will make your tests <strong>QUICK</strong> too!</p>
+
+!SLIDE
+#### (Test doubles)
+
+### Mocks
+
+!SLIDE
+#### (Test doubles)
+
+### Mocks - example
+<p>&nbsp;</p>
+<div class="fragment">
+  <pre><code class="ruby">
+  <%#= include 'code/02-minitest/02-testdoubles/simple_mock.rb' %>
+  </code></pre>
+</div>
+
+!SLIDE
+#### (Test doubles)
+
+### Stubs
+
+!SLIDE
+#### (Test doubles)
+
+### Stubs - example
+<p>&nbsp;</p>
+<div class="fragment">
+  <pre><code class="ruby">
+  <%#= include 'code/02-minitest/02-testdoubles/stub_time.rb' %>
+  </code></pre>
+</div>
+
+
+!SLIDE
+### BP4. Separate your tests so that you can run them separately
+<p>&nbsp;</p>
+<ul>
+  <li class="fragment">Smoke tests</li>
+  <li class="fragment">Unit tests</li>
+  <li class="fragment">Integration tests</li>
+  <li class="fragment">Acceptance tests</li>
+  <li class="fragment">Benchmarks</li>
+</ul>
+<p>&nbsp;</p>
+<p class="fragment">* With Minitest you are on your own here...</p>
+<p class="fragment">See <a href="https://github.com/seattlerb/minitest#running-your-tests">Running Your Tests</a></p>
+
+
+
+!SLIDE
+### BP5. Automate, automate, automate!
+<p>&nbsp;</p>
+<p class="fragment">Do your self a favor</p>
+<p>&nbsp;</p>
+<p class="fragment">Use <code>rake</code> awesomeness</p>
+<p>&nbsp;</p>
+<p class="fragment">or something similar</p>
+
+!SLIDE
+## More on Minitest
+<p>&nbsp;</p>
+<ul>
+  <li class="fragment"><a href="https://github.com/seattlerb/minitest#specs" target="_blank"><code>minitest/spec</code></a> : a very fast, simple, and clean spec system.</li>
+  <li class="fragment"><a href="https://github.com/seattlerb/minitest#benchmarks" target="_blank"><code>minitest/benchmark</code></a> : an awesome way to assert your algorithm's performance.</li>
+  <li class="fragment">a way to <a href="https://github.com/seattlerb/minitest#writing-extensions" target="_blank">write your own extensions</a></li>
+  <li class="fragment">And a lot of <a href="https://github.com/seattlerb/minitest#known-extensions" target="_blank">ready to use extensions</a></li>
+</ul>
 
 !SLIDE down-close
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -288,6 +393,17 @@ Note: You can still use the file as a "library" with "require" and "require_rela
 !SLIDE down-open
 !SLIDE
 ## Resources
+<p>&nbsp;</p>
+
+* Minitest home: [https://github.com/seattlerb/minitest](https://github.com/seattlerb/minitest)
+* Articles
+  * [How to Use MiniTest](http://blog.teamtreehouse.com/short-introduction-minitest)
+  * [Minitest Quick Reference](http://www.mattsears.com/articles/2011/12/10/minitest-quick-reference)
+  * [How do I test my code with Minitest?](http://rubylearning.com/blog/2011/07/28/how-do-i-test-my-code-with-minitest/)
+  * [Minimalicious testing in Ruby 1.9 with MiniTest](http://blog.arvidandersson.se/2012/03/28/minimalicous-testing-in-ruby-1-9)
+  * [A MiniTest::Spec Tutorial: Elegant Spec-Style Testing That Comes With Ruby](http://www.rubyinside.com/a-minitestspec-tutorial-elegant-spec-style-testing-that-comes-with-ruby-5354.html)
+  * [A Guide to Testing Rails Applications](http://guides.rubyonrails.org/testing.html)
+  * [Using MiniTest::Spec With Rails](http://metaskills.net/2011/03/26/using-minitest-spec-with-rails/)
 
 !SLIDE down-close
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
