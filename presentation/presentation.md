@@ -202,11 +202,63 @@ So...
 !SLIDE
 ### Round 1: Same file
 <p>&nbsp;</p>
+<p class="fragment">stat.rb</p>
 <pre class="fragment"><code class="ruby">
 <%= include 'code/01-poormans-testing/01-same-file/stat.rb' %>
 </code></pre>
 
+!SLIDE
+Note: You can still use the file as a "library" with "require" and "require_relative"
+<p>&nbsp;</p>
+<p class="fragment">This way the tests won't run</p>
+<p>&nbsp;</p>
+<p class="fragment">But it is...ugly</p>
 
+!SLIDE
+### Round 2: Separate files
+<p>&nbsp;</p>
+<div class="fragment">
+  <p>stat.rb</p>
+  <pre><code class="ruby">
+  <%= include 'code/01-poormans-testing/02-separate-files/stat.rb' %>
+  </code></pre>
+</div>
+
+!SLIDE
+<p>test_stat.rb</p>
+<pre><code class="ruby">
+<%= include 'code/01-poormans-testing/02-separate-files/test_stat.rb' %>
+</code></pre>
+
+
+!SLIDE
+### Round 3: Separate files with helper
+<p>&nbsp;</p>
+<div class="fragment">
+  <p>stat.rb</p>
+  <pre><code class="ruby">
+  <%= include 'code/01-poormans-testing/02-separate-files-with-helper/stat.rb' %>
+  </code></pre>
+</div>
+
+!SLIDE
+<p>test_helper.rb</p>
+<pre><code class="ruby">
+<%= include 'code/01-poormans-testing/02-separate-files-with-helper/test_helper.rb' %>
+</code></pre>
+
+!SLIDE
+<p>test_stat.rb</p>
+<pre><code class="ruby">
+<%= include 'code/01-poormans-testing/02-separate-files-with-helper/test_stat.rb' %>
+</code></pre>
+
+!SLIDE
+### Round 4
+<p>&nbsp;</p>
+<p class="fragment">STOP!</p>
+<p>&nbsp;</p>
+<p class="fragment">Use a test framework!</p>
 
 !SLIDE down-close
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
