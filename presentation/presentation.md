@@ -1,6 +1,6 @@
-title: Unit Testung with MiniTest
+title: Unit Testing with Minitest
 author: Haris Dimitriou (xarisd)
-description: An introduction to unit testing in Ruby using MiniTest
+description: An introduction to unit testing in Ruby using Minitest
 date: <%= Date.today %>
 % available themes: Default - Sky - Beige - Simple - Serif - Night - Moon - Solarized
 theme: simple
@@ -11,10 +11,10 @@ custom_css: presentation
 
 
 !SLIDE
-## Unit Testing with MiniTest
+## Unit Testing with Minitest
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p class="fragment">Getting started with unit testing in Ruby using MiniTest</p>
+<p class="fragment">Getting started with unit testing in Ruby using Minitest</p>
 
 !SLIDE
 ## Who am I?
@@ -45,11 +45,19 @@ custom_css: presentation
 
 <p>&nbsp;</p>
 
-* 1
-* 2
-* 3
-* 3
-
+* Why write tests anyway?
+* What is "**Unit** Testing"
+* Unit Testing the poor man's way
+* Unit Testing with Minitest
+  * Hello Minitest
+  * Digging Deeper with Minitest
+    * Hooks (setup/teardown)
+    * Test doubles (mocks & stubs)
+    * ...
+* Automated Build
+* Continuous Integration
+* Test Coverage
+* Resources
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

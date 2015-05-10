@@ -1,8 +1,16 @@
+# Editor
 *.swp
+*.sublime-project
+*.sublime-workspace
+
+# Mac OS X
 .DS_Store
+
+# rbenv
 .ruby-version
 .rbenv-gemsets
 .gems
 
+# Prject specific
 slides
 tmp

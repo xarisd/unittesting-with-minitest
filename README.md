@@ -1,7 +1,7 @@
-Unit Testing with MiniTest
+Unit Testing with Minitest
 ==========================
 
-This is a presentation about how to get started with Unit Testing in Ruby using MiniTest.
+This is a presentation about how to get started with Unit Testing in Ruby using Minitest.
 
 You can enjoy it online at <http://xarisd.io/presentations/unittesting-with-minitest>
 
