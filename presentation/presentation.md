@@ -716,6 +716,22 @@ rspec --tags model --tags ~slow # runs all examples marked with :model EXCEPT th
 <pre><code class="ruby">
 <%= include 'code/03-rspec/01-simple/spec/spec_helper_partial_focus_true_slow_false.rb' %></code></pre>
 
+
+!SLIDE
+## RSpec Resources
+<p>&nbsp;</p>
+
+* RSpec home: [http://rspec.info/](http://rspec.info/)
+* RSpec documentation:
+  * [API Documentation](http://rspec.info/documentation/)
+  * [RSpec executable documentation on Relish](https://relishapp.com/rspec/rspec-core/v/3-2/docs) (super cool)
+* Articles
+  * [Back to Basics: Writing Unit Tests First](https://robots.thoughtbot.com/back-to-basics-writing-unit-tests-first)
+  * [End-to-End Testing with RSpec Integration Tests and Capybara](https://robots.thoughtbot.com/rspec-integration-tests-with-capybara)
+  * [Spy vs Spy](https://robots.thoughtbot.com/spy-vs-spy)
+* Books
+  * [The RSpec Book: Behaviour-Driven Development with RSpec, Cucumber, and Friends](https://pragprog.com/book/achbd/the-rspec-book)
+
 !SLIDE
 ## Testing with RSpec : Wrap-up
 <p>&nbsp;</p>
