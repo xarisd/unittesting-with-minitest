@@ -250,6 +250,13 @@ Note: You can still use the file as a "library" with "require" and "require_rela
 !SLIDE
 ## Testing with Minitest
 
+!SLIDE
+## Testing with Minitest : Agenda
+<p>&nbsp;</p>
+* Intro to Minitest
+* Example using Minitest
+* (Some) Best Practices
+* More on Minitest and Resources
 
 !SLIDE
 ## What is Minitest?
@@ -278,7 +285,7 @@ Note: You can still use the file as a "library" with "require" and "require_rela
 <ul>
   <li class="fragment"><code>require "minitest/autorun"</code> enables automatic run of the tests from command line with <code>ruby test_stat</code></li>
   <li class="fragment">You must create a subclass of <code>Minitest::Test</code></li>
-  <li class="fragment">All your tests must be inside instance methods that start with <code>test_</code></li>
+  <li class="fragment">All your test methods must start with <code>test_</code></li>
   <li class="fragment">Minitest offers <a href="http://docs.seattlerb.org/minitest/Minitest/Assertions.html" target="_blank">a lot of assertions</a></li>
 </ul>
 
@@ -322,7 +329,24 @@ Note: You can still use the file as a "library" with "require" and "require_rela
 !SLIDE
 #### (Test doubles)
 
-### Mocks
+### Mocks vs Stubs
+
+<p>&nbsp;</p>
+<p class="fragment">
+<strong>Stub</strong> : For replacing a method with code
+that returns a specified result.
+</p>
+
+<p>&nbsp;</p>
+<p class="fragment">
+<strong>Mock</strong> : A stub with an assertion that the
+method gets called.
+</p>
+
+<p>&nbsp;</p>
+<p class="fragment">
+See Martin Fowler's <a href="http://www.martinfowler.com/bliki/TestDouble.html">"TestDouble"</a>
+</p>
 
 !SLIDE
 #### (Test doubles)
@@ -331,14 +355,9 @@ Note: You can still use the file as a "library" with "require" and "require_rela
 <p>&nbsp;</p>
 <div class="fragment">
   <pre><code class="ruby">
-  <%#= include 'code/02-minitest/02-testdoubles/simple_mock.rb' %>
+  <%= include 'code/02-minitest/02-testdoubles/test_mock.rb' %>
   </code></pre>
 </div>
-
-!SLIDE
-#### (Test doubles)
-
-### Stubs
 
 !SLIDE
 #### (Test doubles)
@@ -347,7 +366,18 @@ Note: You can still use the file as a "library" with "require" and "require_rela
 <p>&nbsp;</p>
 <div class="fragment">
   <pre><code class="ruby">
-  <%#= include 'code/02-minitest/02-testdoubles/stub_time.rb' %>
+  <%= include 'code/02-minitest/02-testdoubles/test_stub.rb' %>
+  </code></pre>
+</div>
+
+!SLIDE
+#### (Test doubles)
+
+### Usually they are used together
+<p>&nbsp;</p>
+<div class="fragment">
+  <pre><code class="ruby">
+  <%= include 'code/02-minitest/02-testdoubles/test_stat.rb' %>
   </code></pre>
 </div>
 
@@ -364,6 +394,7 @@ Note: You can still use the file as a "library" with "require" and "require_rela
 </ul>
 <p>&nbsp;</p>
 <p class="fragment">* With Minitest you are on your own here...</p>
+<p class="fragment">Your best bet is to use the <code>-n, --name PATTERN</code> option</p>
 <p class="fragment">See <a href="https://github.com/seattlerb/minitest#running-your-tests">Running Your Tests</a></p>
 
 
@@ -387,12 +418,8 @@ Note: You can still use the file as a "library" with "require" and "require_rela
   <li class="fragment">And a lot of <a href="https://github.com/seattlerb/minitest#known-extensions" target="_blank">ready to use extensions</a></li>
 </ul>
 
-!SLIDE down-close
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-!SLIDE down-open
 !SLIDE
-## Resources
+## Minitest Resources
 <p>&nbsp;</p>
 
 * Minitest home: [https://github.com/seattlerb/minitest](https://github.com/seattlerb/minitest)
@@ -404,6 +431,14 @@ Note: You can still use the file as a "library" with "require" and "require_rela
   * [A MiniTest::Spec Tutorial: Elegant Spec-Style Testing That Comes With Ruby](http://www.rubyinside.com/a-minitestspec-tutorial-elegant-spec-style-testing-that-comes-with-ruby-5354.html)
   * [A Guide to Testing Rails Applications](http://guides.rubyonrails.org/testing.html)
   * [Using MiniTest::Spec With Rails](http://metaskills.net/2011/03/26/using-minitest-spec-with-rails/)
+
+!SLIDE
+## Testing with Minitest : Wrap-up
+<p>&nbsp;</p>
+* Intro to Minitest
+* Example using Minitest
+* (Some) Best Practices
+* More on Minitest and Resources
 
 !SLIDE down-close
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
