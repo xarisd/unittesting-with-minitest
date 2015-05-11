@@ -464,8 +464,7 @@ See Martin Fowler's <a href="http://www.martinfowler.com/bliki/TestDouble.html">
 * Example using RSpec
 * Avoid repetition with RSpec
 * Configuration, Running and Filters
-* Mocking & Stubbing with RSpec
-* More on RSpec and Resources
+* RSpec Resources
 
 !SLIDE
 ## What is RSpec?
@@ -750,8 +749,7 @@ rspec --tags model --tags ~slow # runs all examples marked with :model EXCEPT th
 * Example using RSpec
 * Avoid repetition with RSpec
 * Configuration, Running and Filters
-* Mocking & Stubbing with RSpec
-* More on RSpec and Resources
+* RSpec Resources
 
 !SLIDE down-close
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
