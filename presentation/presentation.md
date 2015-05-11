@@ -480,6 +480,107 @@ Making TDD Productive and Fun."</quote>
   <li class="fragment">It encourages BDD (but it does not require it)</li>
 </ul>
 
+!SLIDE
+## Using RSpec with our example
+<p>&nbsp;</p>
+<ol>
+  <li class="fragment">
+    <p>Install it</p>
+    <code class="bash">
+    gem install rspec
+    </code>
+  </li>
+  <li class="fragment">
+    <p>Create the needed files</p>
+    <code class="bash">
+    rspec --init
+    </code>
+  </li>
+  <li class="fragment">
+    <p>This creates the following</p>
+    <ul>
+      <li><code>.rspec</code> file</li>
+      <li>
+        <code>spec</code> folder
+        <ul>
+          <li>spec/<code>spec_helper.rb</code> file</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="fragment">
+    <p>Create the <em>specification</em> file ending in <code>_spec.rb</code> containing your <em>examples</em></p>
+    <ul>
+      <li>spec/<code>stat_spec.rb</code> file</li>
+    </ul>
+  </li>
+  <li class="fragment">
+    <p>Run the specs</p>
+    <code class="bash">
+    rspec
+    </code>
+  </li>
+</ol>
+
+!SLIDE
+#### RSpec syntax
+
+## `describe` and `it`
+<p>&nbsp;</p>
+<pre class="fragment"><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_spec_01_pending.rb' %>
+</code></pre>
+
+
+!SLIDE
+#### RSpec syntax
+
+### `describe class`
+<p>&nbsp;</p>
+<pre class="fragment"><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_spec_02_describe_class.rb' %>
+</code></pre>
+
+
+!SLIDE
+#### RSpec syntax
+
+### `describe class` (OK)
+<p>&nbsp;</p>
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_spec_02_describe_class_ok.rb' %>
+</code></pre>
+
+
+!SLIDE
+#### RSpec syntax
+
+### Expectations (Old style)
+<p>&nbsp;</p>
+<pre class="fragment"><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_spec_03_old_style.rb' %>
+</code></pre>
+
+
+!SLIDE
+#### RSpec syntax
+
+### Expectations (New style)
+<p>&nbsp;</p>
+<pre class="fragment"><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_spec_04_new_style.rb' %>
+</code></pre>
+
+
+!SLIDE
+## RSpec Expectations and Matchers
+<p>&nbsp;</p>
+<ul>
+  <li class="fragment">RSpec expectations <a href="http://rspec.info/documentation/3.2/rspec-expectations/#Basic_usage">are super easy to use</a></li>
+  <li class="fragment">RSpec has many <a href="http://rspec.info/documentation/3.2/rspec-expectations/#Built-in_matchers">built-in matchers</a></li>
+  <li class="fragment">You can write your own matchers</li>
+</ul>
+
 
 !SLIDE
 ## Testing with RSpec : Wrap-up
