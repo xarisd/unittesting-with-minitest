@@ -717,6 +717,17 @@ rspec --tags model --tags ~slow # runs all examples marked with :model EXCEPT th
 <%= include 'code/03-rspec/01-simple/spec/spec_helper_partial_focus_true_slow_false.rb' %></code></pre>
 
 
+
+
+!SLIDE
+#### Running our Tests with RSpec
+
+### Ignore examples with `empty it`, `xit` and `pending`
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_peding_spec.rb' %>
+</code></pre>
+
+
 !SLIDE
 ## RSpec Resources
 <p>&nbsp;</p>
