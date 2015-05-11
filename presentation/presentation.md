@@ -48,6 +48,7 @@ custom_css: presentation
 * I DO NOT TEST
 * Testing the poor man's way
 * Testing with Minitest
+* Testing with RSpec (mini version)
 * Resources
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -445,6 +446,50 @@ See Martin Fowler's <a href="http://www.martinfowler.com/bliki/TestDouble.html">
 * Example using Minitest
 * (Some) Best Practices
 * More on Minitest and Resources
+
+
+!SLIDE down-close
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+!SLIDE down-open
+!SLIDE
+## Testing with RSpec
+<p>&nbsp;</p>
+<h3 class="fragment">mini version</h3>
+
+!SLIDE
+## Testing with RSpec : Agenda
+<p>&nbsp;</p>
+* Intro to RSpec
+* Example using RSpec
+* Configuration, Running and Filters
+* Avoid repetition with RSpec
+* Mocking & Stubbing with RSpec
+* More on RSpec and Resources
+
+!SLIDE
+## What is RSpec?
+<p>&nbsp;</p>
+<quote class="fragment">"Behaviour Driven Development for Ruby.<br/>
+Making TDD Productive and Fun."</quote>
+<p>&nbsp;</p>
+<ul>
+  <li class="fragment">It is a very popular testing framework with a large community.</li>
+  <li class="fragment">It offers well-formatted output</li>
+  <li class="fragment">It offers fine grained control for running your tests</li>
+  <li class="fragment">It encourages BDD (but it does not require it)</li>
+</ul>
+
+
+!SLIDE
+## Testing with RSpec : Wrap-up
+<p>&nbsp;</p>
+* Intro to RSpec
+* Example using RSpec
+* Configuration, Running and Filters
+* Avoid repetition with RSpec
+* Mocking & Stubbing with RSpec
+* More on RSpec and Resources
 
 !SLIDE down-close
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
