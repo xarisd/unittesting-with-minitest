@@ -11,7 +11,7 @@ RSpec.describe Stat do
   context "with values pased" do
     subject { Stat.new("My Stat", 100) }
     it { expect(subject.name).to eq("My Stat") }
-    it { expect(subject.value).to eq(1000) }
+    it { expect(subject.value).to eq(100) }
     it { expect(subject.to_s).to eq("STATISTIC: My Stat: 100") }
   end
 end

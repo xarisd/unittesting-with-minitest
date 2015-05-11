@@ -579,7 +579,82 @@ Making TDD Productive and Fun."</quote>
   <li class="fragment">RSpec expectations <a href="http://rspec.info/documentation/3.2/rspec-expectations/#Basic_usage">are super easy to use</a></li>
   <li class="fragment">RSpec has many <a href="http://rspec.info/documentation/3.2/rspec-expectations/#Built-in_matchers">built-in matchers</a></li>
   <li class="fragment">You can write your own matchers</li>
+  <li class="fragment">You can <code>require 'rspec/expectations'</code> and include <code>RSpec::Matchers</code> in any class outside RSpec (i.e. in Minitest)</li>
 </ul>
+
+!SLIDE
+## Avoid repetition with RSpec
+
+
+!SLIDE
+#### Avoid repetition with RSpec
+
+### Using hooks: `before` , `after`
+<p>&nbsp;</p>
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_spec_05_hooks.rb' %>
+</code></pre>
+
+!SLIDE
+#### Avoid repetition with RSpec
+
+### Using `subject` explicitly
+<p>&nbsp;</p>
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_spec_06_subject_explicitly.rb' %>
+</code></pre>
+
+!SLIDE
+#### Avoid repetition with RSpec
+
+### Using `subject` implicitly
+<p>&nbsp;</p>
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_spec_07_subject_implicitly.rb' %>
+</code></pre>
+
+
+!SLIDE
+#### Avoid repetition with RSpec
+
+### Naming `subject`
+<p>&nbsp;</p>
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_spec_08_naming_subject_explicitly.rb' %>
+</code></pre>
+
+
+!SLIDE
+#### Avoid repetition with RSpec
+
+### Using `let` and `let!`
+<p>&nbsp;</p>
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_spec_09_let.rb' %>
+</code></pre>
+
+
+
+!SLIDE
+#### Avoid repetition with RSpec
+
+### Using nested groups ( `describe`, `context`) and `it` with no name
+<p>&nbsp;</p>
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_spec_10_nested_groups.rb' %>
+</code></pre>
+
+
+
+
+!SLIDE
+#### Avoid repetition with RSpec
+
+### Using shared examples (with `shared_examples` and `include_examples`)
+<p>&nbsp;</p>
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/shared_examples_spec.rb' %>
+</code></pre>
 
 
 !SLIDE
