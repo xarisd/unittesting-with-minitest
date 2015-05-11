@@ -2,12 +2,6 @@
 require_relative "../stat"
 
 RSpec.describe Stat, :model do
-  describe "default values" do
-    it { expect(subject.name).to eq("GIVE ME A NAME") }
-    it { expect(subject.value).to eq(0) }
-    it { expect(subject.to_s).to eq("STATISTIC: GIVE ME A NAME: 0") }
-  end
-
   context "with values pased", slow: true do
     subject { Stat.new("My Stat", 100) }
     it { expect(subject.name).to eq("My Stat") }

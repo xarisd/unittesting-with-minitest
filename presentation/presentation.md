@@ -1,6 +1,6 @@
-title: Unit Testing with Minitest
+title: Unit Testing with Minitest and BDD with RSpec
 author: Haris Dimitriou (xarisd)
-description: An introduction to unit testing in Ruby using Minitest
+description: An introduction to unit testing and BDD in Ruby using Minitest and RSpec
 date: <%= Date.today %>
 % available themes: Default - Sky - Beige - Simple - Serif - Night - Moon - Solarized
 theme: simple
@@ -11,10 +11,10 @@ custom_css: presentation
 
 
 !SLIDE
-## Unit Testing with Minitest
+## Unit Testing with Minitest and BDD with RSpec
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p class="fragment">Getting started with unit testing in Ruby using Minitest</p>
+<p class="fragment">Just enough material to make yourself dangerous :-)</p>
 
 !SLIDE
 ## Who am I?
@@ -28,7 +28,7 @@ custom_css: presentation
 </p>
 <p>&nbsp;</p>
 <p class="fragment">
-  Free lance software engineer
+  Freelance software engineer
 </p>
 <p>&nbsp;</p>
 <p class="fragment">
@@ -462,8 +462,8 @@ See Martin Fowler's <a href="http://www.martinfowler.com/bliki/TestDouble.html">
 <p>&nbsp;</p>
 * Intro to RSpec
 * Example using RSpec
-* Configuration, Running and Filters
 * Avoid repetition with RSpec
+* Configuration, Running and Filters
 * Mocking & Stubbing with RSpec
 * More on RSpec and Resources
 
@@ -657,13 +657,72 @@ Making TDD Productive and Fun."</quote>
 </code></pre>
 
 
+
+!SLIDE
+## Running our Tests with RSpec
+<p>&nbsp;</p>
+<h3 class="fragment">Configuration, Metadata, Filters and CLI</h3>
+
+
+!SLIDE
+#### Running our Tests with RSpec
+
+### RSpec CLI
+<p>&nbsp;</p>
+<p class="fragment">RSpec can execute</p>
+<ul>
+  <li class="fragment">Whole test suits : <code>rspec</code></li>
+  <li class="fragment">Tests in specific directory : <code>rspec spec/models</code></li>
+  <li class="fragment">Specific files : <code>rspec spec/stat_spec.rb</code></li>
+  <li class="fragment">Specific examples within a file (by line number) : <code>rspec spec/stat_spec.rb:10</code></li>
+  <li class="fragment">Specific files/examples by pattern, name or tag.</li>
+  <li class="fragment">Just execute <code>rspec --help</code> to see your options</li>
+  <li class="fragment">There are options for output and formatting too.</li>
+</ul>
+
+!SLIDE
+#### Running our Tests with RSpec
+
+### Metadata and filters with tags
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_metadata_spec.rb' %>
+</code></pre>
+<pre><code class="bash">
+rspec --tags model # runs all examples marked with :model
+
+rspec --tags ~model # runs all examples EXCEPT those marked with :model
+
+rspec --tags model --tags ~slow # runs all examples marked with :model EXCEPT those marked with :slow
+</code></pre>
+
+!SLIDE
+#### Running our Tests with RSpec
+
+### :focus on one thing
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_metadata_focus_spec.rb' %>
+</code></pre>
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/spec_helper_partial_focus_true.rb' %></code></pre>
+
+
+!SLIDE
+#### Running our Tests with RSpec
+
+### Do not run :slow tests by default
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/stat_metadata_slow_spec.rb' %>
+</code></pre>
+<pre><code class="ruby">
+<%= include 'code/03-rspec/01-simple/spec/spec_helper_partial_focus_true_slow_false.rb' %></code></pre>
+
 !SLIDE
 ## Testing with RSpec : Wrap-up
 <p>&nbsp;</p>
 * Intro to RSpec
 * Example using RSpec
-* Configuration, Running and Filters
 * Avoid repetition with RSpec
+* Configuration, Running and Filters
 * Mocking & Stubbing with RSpec
 * More on RSpec and Resources
 
