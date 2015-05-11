@@ -348,6 +348,12 @@ method gets called.
 See Martin Fowler's <a href="http://www.martinfowler.com/bliki/TestDouble.html">"TestDouble"</a>
 </p>
 
+<p>&nbsp;</p>
+<p class="fragment">Minitest specific</p>
+<ul>
+  <li class="fragment"><a href="http://docs.seattlerb.org/minitest/Minitest/Mock.html">Mock API</a></li>
+  <li class="fragment"><a href="http://docs.seattlerb.org/minitest/Object.html#method-i-stub">Object.stub API</a></li>
+</ul>
 !SLIDE
 #### (Test doubles)
 
